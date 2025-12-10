@@ -13,7 +13,6 @@ export default function LoginScreen() {
       return;
     }
 
-    // Allow any user to login
     signIn({
       userId: Math.floor(Math.random() * 10000),
       role: 'User',
