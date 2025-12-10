@@ -6,14 +6,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
-// Screens
 import LoginScreen from './Screens/LoginScreen';
 import TasksScreen from './Screens/TasksScreen';
 import TaskDetailsScreen from './Screens/TaskDetailsScreen';
 import ProfileScreen from './Screens/ProfileScreen';
 import AddTaskScreen from "./Screens/AddTaskScreen";
 
-// Crée le contexte pour partager l'auth + user
 export const AuthContext = createContext();
 
 const AuthStack = createNativeStackNavigator();
@@ -69,7 +67,6 @@ function MainTabs() {
   );
 }
 export default function App() {
-  // state user : null = non connecté
  const [user, setUser] = useState(null);
 
  const authContextValue = {
